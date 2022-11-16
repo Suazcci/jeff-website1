@@ -16,6 +16,10 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   const photo1 = new URL("./Assets/img-1.jpg", import.meta.url)
   const photo2 = new URL("./Assets/img-2.png", import.meta.url)
   const photo3 = new URL("./Assets/img-3.png", import.meta.url)
@@ -42,8 +46,7 @@ function Navbar() {
     <>
         <nav className="navbar">
             <div className="navbar-container">
-                <Link to='/' className='navbar-logo' onClick=
-                {closeMobileMenu}>
+                <Link onClick={() => openInNewTab('/')} className='navbar-logo'>
                   Randify
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
@@ -51,22 +54,28 @@ function Navbar() {
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                   <li className='nav-item'>
-                    <NavLink to='/artists' className={({ isActive }) => 'nav-links' + (isActive ? " activated" : "")}>
+                    <NavLink 
+                    onClick={() => openInNewTab('https://open.spotify.com/user/spotify?si=fdad3a2736f44cba')} 
+                    className={({ isActive }) => 'nav-links' + (isActive ? " activated" : "")}>
                       Artists
                     </NavLink>
                   </li>
                   <li className='nav-item'>
-                    <NavLink to='/genre' className={({ isActive }) => 'nav-links' + (isActive ? " activated" : "")} onClick={closeMobileMenu}>
+                    <NavLink 
+                    onClick={() => openInNewTab('https://open.spotify.com/genre/topic-grid')} 
+                    className={({ isActive }) => 'nav-links' + (isActive ? " activated" : "")}>
                       Genres
                     </NavLink>
                   </li>
                   <li className='nav-item'>
-                    <NavLink to='/songs' className={({ isActive }) => 'nav-links' + (isActive ? " activated" : "")} onClick={closeMobileMenu}>
+                    <NavLink 
+                    onClick={() => openInNewTab('https://open.spotify.com/playlist/37i9dQZF1DX4zbZrYRGVam')} 
+                    className={({ isActive }) => 'nav-links' + (isActive ? " activated" : "")}>
                       Songs
                     </NavLink>
                   </li>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>Create Account</
+                {button && <Button onClick={() => openInNewTab('https://www.spotify.com/us/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F')} buttonStyle='btn--outline'>Create Account</
                 Button>}
             </div>
         </nav>
@@ -76,8 +85,7 @@ function Navbar() {
               <source src={bgVid} type="video/mp4" />
             </video>
             <li className='nav-play'>
-                <Link to='/spotify' 
-                className='nav-play-link' onClick={closeMobileMenu}>
+                <Link className='nav-play-link' onClick={() => openInNewTab('https://open.spotify.com/user/spotify?si=fdad3a2736f44cba')} >
                   <BsFillPlayCircleFill />
                 </Link>
             </li>
@@ -88,7 +96,7 @@ function Navbar() {
         <div className='cards__container'>
           <div className='cards__wrapper'>
             <ul className='cards__items'>
-              <CardItem
+              <CardItem 
                 src={photo2}
                 text='Songs everyone is listening to this month'
                 label='Songs'
@@ -115,7 +123,7 @@ function Navbar() {
               type='email'
               placeholder='Your Email'
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle='btn--outline' onClick={() => openInNewTab('/')}>Subscribe</Button>
           </form>
         </div>
       </section>
@@ -123,23 +131,23 @@ function Navbar() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/spotify-api'>Spotify API</Link>
-            <Link to='/'>Careers</Link>
+            <Link onClick={() => openInNewTab('https://developer.spotify.com/documentation/web-api/')}>Spotify API</Link>
+            <Link onClick={() => openInNewTab('https://www.lifeatspotify.com')}>Careers</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Bug Fixes</Link>
-            <Link to='/'>Recomendations</Link>
+            <Link onClick={() => openInNewTab('https://support.spotify.com/us/')}>Support</Link>
+            <Link to='/'>Wallpapers</Link>
+            <Link onClick={() => openInNewTab('https://open.spotify.com/artist/3MZsBdqDrRTJihTHQrO6Dq')}>Personal Favorites</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/discord'>Discord</Link>
-            <Link to='/insta'>Instagram</Link>
-            <Link to='/github'>Github</Link>
-            <Link to='/spotify'>Spotify</Link>
+            <Link onClick={() => openInNewTab('https://discord.com')}>Discord</Link>
+            <Link onClick={() => openInNewTab('https://www.instagram.com')}>Instagram</Link>
+            <Link onClick={() => openInNewTab('https://github.com')}>Github</Link>
+            <Link onClick={() => openInNewTab('https://open.spotify.com')}>Spotify</Link>
           </div>
         </div>
       </div>
@@ -154,32 +162,28 @@ function Navbar() {
           <div class='social-icons'>
             <Link
               class='social-icon-link-discord discord'
-              to='/discord'
-              target='_blank'
+              onClick={() => openInNewTab('https://discord.com')}
               aria-label='Discord'
             >
               <SiDiscord />
             </Link>
             <Link
               class='social-icon-link-instagram instagram'
-              to='/insta'
-              target='_blank'
+              onClick={() => openInNewTab('https://www.instagram.com')}
               aria-label='Instagram'
             >
               <FiInstagram />
             </Link>
             <Link
               class='social-icon-link-github github'
-              target='_blank'
-              to='/github'
+              onClick={() => openInNewTab('https://github.com')}
               aria-label='Github'
             >
               <AiFillGithub />
             </Link>
             <Link
               class='social-icon-link-spotify spotify'
-              to='/spotify'
-              target='_blank'
+              onClick={() => openInNewTab('https://open.spotify.com')}
               aria-label='Spotify'
             >
               <BsSpotify />

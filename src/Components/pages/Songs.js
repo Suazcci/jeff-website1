@@ -4,6 +4,11 @@ import '../../Components/Cards.css';
 
 export default function Songs() {
 
+    const openInNewTab = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      };    
+
+
     return (
         <div className='spotify-container'>
             <div style={{position: 'relative', height: 0, overflow: 'hidden', paddingBottom: '56.25%'}}>
