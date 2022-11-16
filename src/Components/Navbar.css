@@ -62,6 +62,22 @@
     border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
   }
+
+  .nav-play {
+    size: 300px;
+    color:darkorchid;
+    display: flex;
+    align-items: center;
+    font-size: 280px;
+    transform-style: preserve-3d;
+    transition: 0.5 ease-out;
+  }
+
+  .nav-play-link:hover {
+    transition: all 0.2s ease-out;
+    color: white;
+    font-size: 300px;
+  }
   
   .fa-bars {
     color: #fff;
