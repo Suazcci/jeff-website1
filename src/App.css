@@ -5,8 +5,9 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+
 .home,
-.artist,
+.artists,
 .genre,
 .songs {
   display: flex;
@@ -16,7 +17,7 @@
   font-size: 3rem;
 }
 
-.artist {
+.artists {
   background-image: url('./Components/Assets/img-1.jpg');
   background-position: center;
   background-size: cover;
@@ -26,7 +27,7 @@
 }
 
 .genre {
-  background-image: url('./Components/Assets/img-1.jpg');
+  background-image: url('./Components/Assets/img-2.png');
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -35,10 +36,29 @@
 }
 
 .songs {
-  background-image: url('./Components/Assets/img-1.jpg');
+  background-image: url('./Components/Assets/img-3.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
 }
+/*
+.create-account {
+background-image: url('./Components/Assets/img-4.png');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.spotify {
+  background-image: url('./Components/Assets/img-4.png');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+*/
