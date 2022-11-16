@@ -21,6 +21,7 @@ const App = () => {
                 <Navbar />
                 <Routes>
                     <Route path='/' exact element={Home} />
+                    
                 </Routes>
             </Router>
         </>
@@ -35,5 +36,5 @@ export default App;
                     <Route path='/songs'  element={<Songs />} />
                     <Route path='/genre'  element={<Genre />} />
                     <Route path='/create-account'  element={<CreateAccount />} />
-                    <Route path='/spotify-api'  element={<SpotifyAPI />} />
+                    <Route path='/spotify-api'  element={<SpotifyAPI />} />            
 */

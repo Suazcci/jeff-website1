@@ -24,6 +24,11 @@ function Navbar() {
   const photo2 = new URL("./Assets/img-2.png", import.meta.url)
   const photo3 = new URL("./Assets/img-3.png", import.meta.url)
   const photo4 = new URL("./Assets/img-4.png", import.meta.url)
+  const photo5 = new URL("./Assets/img-5.png", import.meta.url)
+  const photo6 = new URL("./Assets/img-6.png", import.meta.url)
+  const photo7 = new URL("./Assets/img-7.png", import.meta.url)
+  const photo8 = new URL("./Assets/img-8.png", import.meta.url)
+  const photo9 = new URL("./Assets/img-9.jpg", import.meta.url)
 
 
   const handleClick = () => setClick(!click);
@@ -97,13 +102,30 @@ function Navbar() {
           <div className='cards__wrapper'>
             <ul className='cards__items'>
               <CardItem 
+                src={photo5}
+                text='Songs everyone is listening to this month'
+                label='Songs'
+                path='/songs'
+              />
+            </ul>
+            <ul className='cards__items'>
+              <CardItem 
                 src={photo2}
                 text='Songs everyone is listening to this month'
                 label='Songs'
                 path='/songs'
               />
             </ul>
+            <ul className='cards__items'>
+              <CardItem 
+                src={photo6}
+                text='Songs everyone is listening to this month'
+                label='Songs'
+                path='/songs'
+              />
+            </ul>
           </div>
+          
         </div>
 
       </div>
@@ -137,7 +159,7 @@ function Navbar() {
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
             <Link onClick={() => openInNewTab('https://support.spotify.com/us/')}>Support</Link>
-            <Link to='/'>Wallpapers</Link>
+            <Link onClick={() => openInNewTab('https://royaltyfreetube.com/category/loop/')}>Wallpapers</Link>
             <Link onClick={() => openInNewTab('https://open.spotify.com/artist/3MZsBdqDrRTJihTHQrO6Dq')}>Personal Favorites</Link>
           </div>
         </div>
