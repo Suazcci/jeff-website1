@@ -21,12 +21,6 @@ const App = () => {
                 <Navbar />
                 <Routes>
                     <Route path='/' exact element={Home} />
-                    <Route path='/artists'  element={<Artists />} />
-                    <Route path='/spotify'  element={<Spotify />} />
-                    <Route path='/songs'  element={<Songs />} />
-                    <Route path='/genre'  element={<Genre />} />
-                    <Route path='/create-account'  element={<CreateAccount />} />
-                    <Route path='/spotify-api'  element={<SpotifyAPI />} />
                 </Routes>
             </Router>
         </>
@@ -34,3 +28,12 @@ const App = () => {
 }
 
 export default App;
+
+/* 
+                    <Route path='/artists'  element={<Artists />} />
+                    <Route path='/spotify'  element={<Spotify />} />
+                    <Route path='/songs'  element={<Songs />} />
+                    <Route path='/genre'  element={<Genre />} />
+                    <Route path='/create-account'  element={<CreateAccount />} />
+                    <Route path='/spotify-api'  element={<SpotifyAPI />} />
+*/
