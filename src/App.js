@@ -5,6 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from
 import './App.css';
 import Home from './Components/pages/Home';
 import './Components/HeroSection.js';
+import Songs from './Components/pages/Songs';
+import Artists from './Components/pages/Artists';
+import Genre from './Components/pages/Genre';
+import CreateAccount from './Components/pages/CreateAccount';
+import Spotify from './Components/pages/Spotify';
+import SpotifyAPI from './Components/pages/SpotifyAPI';
+import Navigate from './Components/Navigate';
+
 
 const App = () => {
     return (
@@ -13,6 +21,12 @@ const App = () => {
                 <Navbar />
                 <Routes>
                     <Route path='/' exact element={Home} />
+                    <Route path='/artists'  element={<Artists />} />
+                    <Route path='/spotify'  element={<Spotify />} />
+                    <Route path='/songs'  element={<Songs />} />
+                    <Route path='/genre'  element={<Genre />} />
+                    <Route path='/create-account'  element={<CreateAccount />} />
+                    <Route path='/spotify-api'  element={<SpotifyAPI />} />
                 </Routes>
             </Router>
         </>
